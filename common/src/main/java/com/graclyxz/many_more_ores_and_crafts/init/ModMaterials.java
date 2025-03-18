@@ -20,9 +20,9 @@ public class ModMaterials {
 
     public interface Armor {
 
-        /*ArmorMaterial SILVER = new ArmorMaterial(18, createMap(new int[]{2, 5, 4, 2, 5}),
-                16, SoundEvents.ARMOR_EQUIP_GOLD, 0f, 0f,
-                ModTags.Items.SILVER_INGOT, createAsset("silver"));*/
+        ArmorMaterial MYTHRIL = new ArmorMaterial(32, createMap(new int[]{4, 8, 6, 2, 8}),
+                24, SoundEvents.ARMOR_EQUIP_NETHERITE, 2f, 0.1f,
+                ModTags.Items.MYTHRIL_INGOT, createAsset("mythril"));
 
         private static ResourceKey<EquipmentAsset> createAsset(String name) {
             return ResourceKey.create(EquipmentAssets.ROOT_ID, ResourceLocation.fromNamespaceAndPath(MOD_ID, name));
@@ -36,8 +36,8 @@ public class ModMaterials {
     }
 
     public interface Tool {
-        /*ToolMaterial SILVER = new ToolMaterial(BlockTags.INCORRECT_FOR_STONE_TOOL,
-                350, 8f, 0f, 16,
-                ModTags.Items.SILVER_INGOT);*/
+        ToolMaterial MYTHRIL = new ToolMaterial(BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
+                2031, 12f, 0f, 24,
+                ModTags.Items.MYTHRIL_INGOT);
     }
 }
